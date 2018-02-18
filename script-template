@@ -1,0 +1,8 @@
+reload in 005
+
+tclsh
+ios_config "fastethernet X/X" "speed 100" "duplex full"
+
+reload cancel
+
+wr
