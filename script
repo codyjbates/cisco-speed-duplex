@@ -5,7 +5,7 @@ set interface-id [ gets stdin ]
 puts -nonewline "Please enter the desired interface speed (e.g. 100): "
 flush stdout
 set speed-input [ gets stdin ]
-puts -nonewline "Please enter the desired duplex speed (e.g. full): "
+puts -nonewline "Please enter the desired duplex (e.g. full): "
 flush stdout
 set duplex-input [ gets stdin ]
 ios_config "int $interface-id" "speed $speed-input" "duplex $duplex-input"
