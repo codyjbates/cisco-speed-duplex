@@ -1,0 +1,12 @@
+tclsh
+puts -nonewline "Please enter the desired interface (e.g. fastethernet 0/0): "
+flush stdout
+set interface-id [ gets stdin ]
+puts -nonewline "Please enter the desired interface speed (e.g. 100): "
+flush stdout
+set speed-input [ gets stdin ]
+puts -nonewline "Please enter the desired duplex speed (e.g. full): "
+flush stdout
+set duplex-input [ gets stdin ]
+ios_config "int $interface-id" "speed $speed-input" "duplex $duplex-input"
+puts "Script Complete!"
